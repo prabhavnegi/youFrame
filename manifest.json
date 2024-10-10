@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "youFrame",
+    "description": "Opens YouTube videos in a new tab with embedded player",
+    "version": "1.0",
+    "permissions": ["tabs", "webNavigation"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["player.html"],
+            "matches": ["*://*.youtube.com/*"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/icon.png",
+            "48": "images/icon.png",
+            "128": "images/icon.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    }
+
+}
