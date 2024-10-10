@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 15px;
     color: #00ff00; 
 }
 
@@ -70,16 +70,23 @@ button:hover {
 footer {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 a {
     color: #00ff00;
     text-decoration: none; 
     display: flex; 
-    align-items: center; 
+    align-items: center;
+}
+
+i {
+    margin-right: 5px;
 }
 
 a:hover {
     text-decoration: underline; 
+}
+.instructions {
+    color: #00ff00; /* Matrix-like green for instructions */
 }
